@@ -1,0 +1,183 @@
+1. Instruction: addi sp, sp, -48
+ADD Immediate
+
+Type: I-Type
+Opcode: 0010011
+funct3: 000
+rs1: sp (x2) - 00010
+rd: sp (x2) - 00010
+Immediate: -48 (12-bit signed: 111111110100)
+Encoding: 111111110100 00010 000 00010 0010011
+Result: 0xffc10113
+
+
+2. Instruction: lui a0, 0x2b
+Load Upper Immediate
+
+Type: U-Type
+Opcode: 0110111
+rd: a0 (x10) - 01010
+Immediate: 0x2b (20-bit upper immediate: 0000000000101011)
+Encoding: 0000000000101011 01010 0110111
+Result: 0x02b00537
+
+
+3. Instruction: sd ra, 40(sp)
+Store Doubleword
+
+Type: S-Type
+Opcode: 0100011
+funct3: 011
+rs1: sp (x2) - 00010
+rs2: ra (x1) - 00001
+Immediate: 40 (12-bit signed: 000000101000)
+Encoding: 0000001 01000 00010 011 00001 0100011
+Result: 0x02813023
+
+
+4. Instruction: jal ra, 10578 <printf>
+Jump and Link
+
+Type: J-Type
+Opcode: 1101111
+rd: ra (x1) - 00001
+Immediate: 10578 (20-bit signed: 00001010010110000000)
+Encoding: 0000101001011 00000 00001 1101111
+Result: 0x04ac000ef
+
+
+5. Instruction: addi a0, a0, -912
+ADD Immediate
+
+Type: I-Type
+Opcode: 0010011
+funct3: 000
+rs1: a0 (x10) - 01010
+rd: a0 (x10) - 01010
+Immediate: -912 (12-bit signed: 111110010000)
+Encoding: 111110010000 01010 000 01010 0010011
+Result: 0xfc407513
+
+
+6. Instruction: sd s1, 24(sp)
+Store Doubleword
+
+Type: S-Type
+Opcode: 0100011
+funct3: 011
+rs1: sp (x2) - 00010
+rs2: s1 (x9) - 01001
+Immediate: 24 (12-bit signed: 000000011000)
+Encoding: 0000000 11000 00010 011 01001 0100011
+Result: 0x01813c23
+
+
+7. Instruction: jal ra, 105cc <scanf>
+Jump and Link
+
+Type: J-Type
+Opcode: 1101111
+rd: ra (x1) - 00001
+Immediate: 105cc (20-bit signed: 00001010011110000000)
+Encoding: 0000101001111 00000 00001 1101111
+Result: 0x04f0000ef
+
+
+8. Instruction: li a1, 10
+Load Immediate (ADD Immediate special case)
+
+Type: I-Type
+Opcode: 0010011
+funct3: 000
+rs1: zero (x0) - 00000
+rd: a1 (x11) - 01011
+Immediate: 10 (12-bit signed: 000000001010)
+Encoding: 000000001010 00000 000 01011 0010011
+Result: 0x00a00593
+
+
+9. Instruction: sd s0, 32(sp)
+Store Doubleword
+
+Type: S-Type
+Opcode: 0100011
+funct3: 011
+rs1: sp (x2) - 00010
+rs2: s0 (x8) - 01000
+Immediate: 32 (12-bit signed: 000000100000)
+Encoding: 0000001 00000 00010 011 01000 0100011
+Result: 0x02013423
+
+
+10. Instruction: lui a0, 0x26
+Load Upper Immediate
+
+Type: U-Type
+Opcode: 0110111
+rd: a0 (x10) - 01010
+Immediate: 0x26 (20-bit upper immediate: 0000000000010110)
+Encoding: 0000000000010110 01010 0110111
+Result: 0x02600537
+
+
+11. Instruction: sw zero, 12(sp)
+Store Word
+
+Type: S-Type
+Opcode: 0100011
+funct3: 010
+rs1: sp (x2) - 00010
+rs2: zero (x0) - 00000
+Immediate: 12 (12-bit signed: 000000001100)
+Encoding: 0000000 01100 00010 010 00000 0100011
+Result: 0x00c12023
+
+
+12. Instruction: jal ra, 10260 <divdi3>
+Jump and Link
+
+Type: J-Type
+Opcode: 1101111
+rd: ra (x1) - 00001
+Immediate: 10260 (20-bit signed: 00001010000010000000)
+Encoding: 0000101000001 00000 00001 1101111
+Result: 0x0150000ef
+
+
+13. Instruction: li a0, 0
+Load Immediate (ADD Immediate special case)
+
+Type: I-Type
+Opcode: 0010011
+funct3: 000
+rs1: zero (x0) - 00000
+rd: a0 (x10) - 01010
+Immediate: 0 (12-bit signed: 000000000000)
+Encoding: 000000000000 00000 000 01010 0010011
+Result: 0x00000513
+
+
+14. Instruction: sd s2, 16(sp)
+Store Doubleword
+
+Type: S-Type
+Opcode: 0100011
+funct3: 011
+rs1: sp (x2) - 00010
+rs2: s2 (x18) - 10010
+Immediate: 16 (12-bit signed: 000000010000)
+Encoding: 0000000 10000 00010 011 10010 0100011
+Result: 0x01013923
+
+
+15. Instruction: addi sp, sp, 48
+ADD Immediate
+
+Type: I-Type
+Opcode: 0010011
+funct3: 000
+rs1: sp (x2) - 00010
+rd: sp (x2) - 00010
+Immediate: 48 (12-bit signed: 000000110000)
+Encoding: 000000110000 00010 000 00010 0010011
+Result: 0x03010113
